@@ -1,0 +1,9 @@
+# Visual Studio Files
+.vs/
+
+# Build Files
+bin/
+bin-int/
+
+# Build commands
+build.bat
