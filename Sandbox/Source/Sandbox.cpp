@@ -1,7 +1,23 @@
 #include <Forge.h>
 
 
-int main()
+class Sandbox : public Forge::Application
 {
-	Forge::Print();
+public:
+	Sandbox()
+	{
+		FG_TRACE("Hello, World!");
+	}
+
+	~Sandbox()
+	{
+
+	}
+
+};
+
+
+Forge::Application* Forge::CreateApplication()
+{
+	return new Sandbox();
 }

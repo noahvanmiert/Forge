@@ -41,14 +41,14 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>..\bin\Debug-windows-x86_64\Forge\</OutDir>
-    <IntDir>..\bin-int\Debug-windows-x86_64\Forge\</IntDir>
+    <OutDir>..\Binaries\Debug-windows-x86_64\Forge\</OutDir>
+    <IntDir>..\Binaries\Intermediates\Debug-windows-x86_64\Forge\</IntDir>
     <TargetName>Forge</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>..\bin\Release-windows-x86_64\Forge\</OutDir>
-    <IntDir>..\bin-int\Release-windows-x86_64\Forge\</IntDir>
+    <OutDir>..\Binaries\Release-windows-x86_64\Forge\</OutDir>
+    <IntDir>..\Binaries\Intermediates\Release-windows-x86_64\Forge\</IntDir>
     <TargetName>Forge</TargetName>
     <TargetExt>.lib</TargetExt>
   </PropertyGroup>
@@ -57,7 +57,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>FG_PLATFORM_WINDOWS;FG_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Source;Vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -75,7 +75,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>FG_PLATFORM_WINDOWS;FG_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Source;Vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -96,9 +96,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Source\Forge.h" />
+    <ClInclude Include="Source\Forge\Application.h" />
+    <ClInclude Include="Source\Forge\Core.h" />
+    <ClInclude Include="Source\Forge\EntryPoint.h" />
+    <ClInclude Include="Source\Forge\Logging\Logger.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source\Forge.cpp" />
+    <ClCompile Include="Source\Forge\Application.cpp" />
+    <ClCompile Include="Source\Forge\Logging\Logger.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

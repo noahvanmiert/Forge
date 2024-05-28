@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Forge">
+      <UniqueIdentifier>{1884300D-8498-58BE-4D1A-FC1DB9ED54EF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Forge\Logging">
+      <UniqueIdentifier>{AEFCED97-1ABD-69CE-E3F7-B24B4F77AEAA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Forge.h" />
+    <ClInclude Include="Source\Forge\Application.h">
+      <Filter>Forge</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Forge\Core.h">
+      <Filter>Forge</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Forge\EntryPoint.h">
+      <Filter>Forge</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Forge\Logging\Logger.h">
+      <Filter>Forge\Logging</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Forge\Application.cpp">
+      <Filter>Forge</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Forge\Logging\Logger.cpp">
+      <Filter>Forge\Logging</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -2,8 +2,8 @@
 .vs/
 
 # Build Files
-bin/
-bin-int/
+Binaries/
+Binaries/Intermediates
 
-# Build commands
-build.bat
+# Dependencies
+Vendor/
