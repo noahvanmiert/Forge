@@ -22,6 +22,7 @@
     <ClInclude Include="Source\Forge\Logging\Logger.h">
       <Filter>Forge\Logging</Filter>
     </ClInclude>
+    <ClInclude Include="Source\fgpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Forge\Application.cpp">
@@ -30,5 +31,6 @@
     <ClCompile Include="Source\Forge\Logging\Logger.cpp">
       <Filter>Forge\Logging</Filter>
     </ClCompile>
+    <ClCompile Include="Source\fgpch.cpp" />
   </ItemGroup>
 </Project>

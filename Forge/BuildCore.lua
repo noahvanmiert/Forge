@@ -7,6 +7,9 @@ project "Forge"
     targetdir ("../Binaries/" .. outputdir .. "/%{prj.name}")
 	objdir ("../Binaries/Intermediates/" .. outputdir .. "/%{prj.name}")
     
+    pchheader "fgpch.h"
+    pchsource "Source/fgpch.cpp"
+
     files 
     { 
         "Source/**.h",

@@ -1,6 +1,5 @@
 #pragma once
 
-
 /* -- entry point -- */
 #include "Forge/EntryPoint.h"
 /* ----------------- */
