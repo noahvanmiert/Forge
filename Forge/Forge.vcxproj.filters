@@ -4,6 +4,9 @@
     <Filter Include="Forge">
       <UniqueIdentifier>{1884300D-8498-58BE-4D1A-FC1DB9ED54EF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Forge\Events">
+      <UniqueIdentifier>{FCA4953A-E807-25DF-918D-5D957DCFF061}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Forge\Logging">
       <UniqueIdentifier>{AEFCED97-1ABD-69CE-E3F7-B24B4F77AEAA}</UniqueIdentifier>
     </Filter>
@@ -19,10 +22,25 @@
     <ClInclude Include="Source\Forge\EntryPoint.h">
       <Filter>Forge</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Forge\Events\ApplicationEvent.h">
+      <Filter>Forge\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Forge\Events\Event.h">
+      <Filter>Forge\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Forge\Events\KeyEvent.h">
+      <Filter>Forge\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Forge\Events\MouseEvent.h">
+      <Filter>Forge\Events</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Forge\Logging\Logger.h">
       <Filter>Forge\Logging</Filter>
     </ClInclude>
     <ClInclude Include="Source\fgpch.h" />
+    <ClInclude Include="Source\Forge\Layer\Layer.h" />
+    <ClInclude Include="Source\Forge\Core\DeltaTime.h" />
+    <ClInclude Include="Source\Forge\Layer\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Forge\Application.cpp">
@@ -32,5 +50,7 @@
       <Filter>Forge\Logging</Filter>
     </ClCompile>
     <ClCompile Include="Source\fgpch.cpp" />
+    <ClCompile Include="Source\Forge\Layer\Layer.cpp" />
+    <ClCompile Include="Source\Forge\Layer\LayerStack.cpp" />
   </ItemGroup>
 </Project>

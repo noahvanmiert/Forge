@@ -62,7 +62,6 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <AdditionalOptions>/EHsc /Zc:preprocessor /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -85,7 +84,6 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <AdditionalOptions>/EHsc /Zc:preprocessor /Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -100,12 +98,21 @@
     <ClInclude Include="Source\Forge.h" />
     <ClInclude Include="Source\Forge\Application.h" />
     <ClInclude Include="Source\Forge\Core.h" />
+    <ClInclude Include="Source\Forge\Core\DeltaTime.h" />
     <ClInclude Include="Source\Forge\EntryPoint.h" />
+    <ClInclude Include="Source\Forge\Events\ApplicationEvent.h" />
+    <ClInclude Include="Source\Forge\Events\Event.h" />
+    <ClInclude Include="Source\Forge\Events\KeyEvent.h" />
+    <ClInclude Include="Source\Forge\Events\MouseEvent.h" />
+    <ClInclude Include="Source\Forge\Layer\LayerStack.h" />
     <ClInclude Include="Source\Forge\Logging\Logger.h" />
     <ClInclude Include="Source\fgpch.h" />
+    <ClInclude Include="Source\Forge\Layer\Layer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Forge\Application.cpp" />
+    <ClCompile Include="Source\Forge\Layer\Layer.cpp" />
+    <ClCompile Include="Source\Forge\Layer\LayerStack.cpp" />
     <ClCompile Include="Source\Forge\Logging\Logger.cpp" />
     <ClCompile Include="Source\fgpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

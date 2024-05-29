@@ -6,9 +6,6 @@ workspace "Forge"
     filter "system:windows"
         buildoptions 
         { 
-            "/EHsc",
-            "/Zc:preprocessor",
-            "/Zc:__cplusplus" 
         }
         
 

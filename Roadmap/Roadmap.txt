@@ -1,0 +1,7 @@
+TODO:
+
+	1. [*] Event System
+	2. [ ] Window Abstraction and GLFW
+	3. [ ] Window Events
+	4. [ ] Layer System
+	5. [ ] Glad
