@@ -10,6 +10,7 @@ namespace Forge {
 	{
 	}
 
+
 	Layer::~Layer()
 	{
 	}

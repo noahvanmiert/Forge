@@ -4,7 +4,6 @@
 
 
 namespace Forge {
-
 	
 	std::shared_ptr<spdlog::logger> Logger::s_CoreLogger;
 	std::shared_ptr<spdlog::logger> Logger::s_ClientLogger;

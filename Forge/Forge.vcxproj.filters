@@ -4,11 +4,20 @@
     <Filter Include="Forge">
       <UniqueIdentifier>{1884300D-8498-58BE-4D1A-FC1DB9ED54EF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Forge\Core">
+      <UniqueIdentifier>{70F797EF-5CAF-D93C-C5B6-B298B18D742D}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Forge\Events">
       <UniqueIdentifier>{FCA4953A-E807-25DF-918D-5D957DCFF061}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Forge\Layer">
+      <UniqueIdentifier>{E43232E3-50E8-AAD8-D9DC-A4AF4591A1DC}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Forge\Logging">
       <UniqueIdentifier>{AEFCED97-1ABD-69CE-E3F7-B24B4F77AEAA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Forge\Windows">
+      <UniqueIdentifier>{52C62CD9-BE86-A80F-87C1-F18CF340EDEB}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -18,6 +27,9 @@
     </ClInclude>
     <ClInclude Include="Source\Forge\Core.h">
       <Filter>Forge</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Forge\Core\DeltaTime.h">
+      <Filter>Forge\Core</Filter>
     </ClInclude>
     <ClInclude Include="Source\Forge\EntryPoint.h">
       <Filter>Forge</Filter>
@@ -34,23 +46,39 @@
     <ClInclude Include="Source\Forge\Events\MouseEvent.h">
       <Filter>Forge\Events</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Forge\Layer\Layer.h">
+      <Filter>Forge\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Forge\Layer\LayerStack.h">
+      <Filter>Forge\Layer</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Forge\Logging\Logger.h">
       <Filter>Forge\Logging</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Forge\Window.h">
+      <Filter>Forge</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Forge\Windows\WindowsWindow.h">
+      <Filter>Forge\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="Source\fgpch.h" />
-    <ClInclude Include="Source\Forge\Layer\Layer.h" />
-    <ClInclude Include="Source\Forge\Core\DeltaTime.h" />
-    <ClInclude Include="Source\Forge\Layer\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Forge\Application.cpp">
       <Filter>Forge</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Forge\Layer\Layer.cpp">
+      <Filter>Forge\Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Forge\Layer\LayerStack.cpp">
+      <Filter>Forge\Layer</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Forge\Logging\Logger.cpp">
       <Filter>Forge\Logging</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Forge\Windows\WindowsWindow.cpp">
+      <Filter>Forge\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="Source\fgpch.cpp" />
-    <ClCompile Include="Source\Forge\Layer\Layer.cpp" />
-    <ClCompile Include="Source\Forge\Layer\LayerStack.cpp" />
   </ItemGroup>
 </Project>

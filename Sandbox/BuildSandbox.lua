@@ -4,8 +4,8 @@ project "Sandbox"
     cppdialect "C++20"
     staticruntime "on"
 
-    targetdir ("../Binaries/" .. outputdir .. "/%{prj.name}")
-	objdir ("../Binaries/Intermediates/" .. outputdir .. "/%{prj.name}")
+    targetdir (SolutionDir .. "/Binaries/" .. OutputDir .. "/%{prj.name}")
+	objdir (SolutionDir .. "/Binaries/Intermediates/" .. OutputDir .. "/%{prj.name}")
 
     files 
     {
@@ -15,8 +15,8 @@ project "Sandbox"
 
     includedirs 
     {
-        "../Forge/Source",
-        "../Forge/Vendor/spdlog/include",
+        SolutionDir .. "/Forge/Source",
+        SolutionDir .. "/Forge/Vendor/spdlog/include",
     }
 
     links 
@@ -25,18 +25,15 @@ project "Sandbox"
     }
 
     filter "system:windows"
+		defines "FG_PLATFORM_WINDOWS"
 		systemversion "latest"
-		defines 
-        {
-			"FG_PLATFORM_WINDOWS"
-		}
 
 	filter "configurations:Debug"
-		defines "HR_DEBUG"
+        defines "FG_DEBUG"
 		symbols "On"
 		runtime "Debug"
-
+  
 	filter "configurations:Release"
-		defines "HR_Release"
+        defines "FG_RELEASE"
 		optimize "On"
 		runtime "Release"

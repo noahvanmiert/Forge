@@ -58,7 +58,7 @@
       <PrecompiledHeaderFile>fgpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>FG_PLATFORM_WINDOWS;FG_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Source;Vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Source;Vendor\spdlog\include;Vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -69,6 +69,9 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -76,7 +79,7 @@
       <PrecompiledHeaderFile>fgpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>FG_PLATFORM_WINDOWS;FG_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>Source;Vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Source;Vendor\spdlog\include;Vendor\GLFW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -93,6 +96,9 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+    <Lib>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Source\Forge.h" />
@@ -104,19 +110,27 @@
     <ClInclude Include="Source\Forge\Events\Event.h" />
     <ClInclude Include="Source\Forge\Events\KeyEvent.h" />
     <ClInclude Include="Source\Forge\Events\MouseEvent.h" />
+    <ClInclude Include="Source\Forge\Layer\Layer.h" />
     <ClInclude Include="Source\Forge\Layer\LayerStack.h" />
     <ClInclude Include="Source\Forge\Logging\Logger.h" />
+    <ClInclude Include="Source\Forge\Window.h" />
+    <ClInclude Include="Source\Forge\Windows\WindowsWindow.h" />
     <ClInclude Include="Source\fgpch.h" />
-    <ClInclude Include="Source\Forge\Layer\Layer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Forge\Application.cpp" />
     <ClCompile Include="Source\Forge\Layer\Layer.cpp" />
     <ClCompile Include="Source\Forge\Layer\LayerStack.cpp" />
     <ClCompile Include="Source\Forge\Logging\Logger.cpp" />
+    <ClCompile Include="Source\Forge\Windows\WindowsWindow.cpp" />
     <ClCompile Include="Source\fgpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Vendor\GLFW\GLFW.vcxproj">
+      <Project>{154B857C-0182-860D-AA6E-6C109684020F}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

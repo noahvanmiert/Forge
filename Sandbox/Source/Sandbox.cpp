@@ -6,7 +6,7 @@ class Sandbox : public Forge::Application
 public:
 	Sandbox()
 	{
-		FG_TRACE("Hello, World!");
+
 	}
 
 	~Sandbox()
