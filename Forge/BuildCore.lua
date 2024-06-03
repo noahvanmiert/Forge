@@ -20,18 +20,25 @@ project "Forge"
     {
         "Source",
         "Vendor/spdlog/include",
+
         SolutionDir .. "/%{IncludeDir.GLFW}",
+        SolutionDir .. "/%{IncludeDir.Glad}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib",
     }
 
     filter "system:windows"
-        defines "FG_PLATFORM_WINDOWS"
         systemversion "latest"
+        defines 
+        {
+            "FG_PLATFORM_WINDOWS",
+            "GLFW_INCLUDE_NONE",
+        }
 
     filter "configurations:Debug"
        defines "FG_DEBUG"

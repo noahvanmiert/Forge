@@ -2,6 +2,8 @@
 
 #include "Application.h"
 
+#include <Glad/glad.h>
+
 
 namespace Forge {
 

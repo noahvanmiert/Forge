@@ -11,6 +11,7 @@ OutputDir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to solution directory
 IncludeDir = {}
 IncludeDir["GLFW"] = "Forge/Vendor/GLFW/include"
+IncludeDir["Glad"] = "Forge/Vendor/glad/include"
 
 
 group "Core"
@@ -19,6 +20,7 @@ group ""
 
 group "Dependencies"
     include "Forge/Vendor/GLFW/BuildGLFW.lua"
+    include "Forge/Vendor/glad/BuildGlad.lua"
 group ""
 
 include "Sandbox/BuildSandbox.lua"
